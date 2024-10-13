@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_AIWFC</name>
+    <author><![CDATA[Carlos Cámara]]></author>
+    <authorEmail>carlos@hepta.es</authorEmail>
+    <authorUrl>https://developingextensionsforjoomla5.com</authorUrl>
+    <creationDate>2024-10-04</creationDate>
+    <copyright>(C) 2024 Noël Enterprises.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>0.1.0</version>
+    <description><![CDATA[Liste de souhaits de Noël pour Joomla!]]></description>
+    <namespace path="src">Noel\Component\Aiwfc</namespace>
+    <administration>
+        <files folder="admin">
+            <folder>services</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <menu link="option=com_aiwfc" img="class:default">
+            <![CDATA[Liste de souhaits]]>
+        </menu>
+    </administration>
+</extension>

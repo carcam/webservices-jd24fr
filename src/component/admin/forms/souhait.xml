@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field name="id" type="hidden" />
+    <field name="titre" type="text" label="Titre" required="true" />
+    <field name="description" type="editor" label="Description" required="false" />
+    <field name="cree_le" type="calendar" default="NOW" label="Créé le" required="false" readonly="true"/>
+    <field name="cree_par" type="user" label="Créé par" readonly="true" default="CURRENT" />
+</form>
