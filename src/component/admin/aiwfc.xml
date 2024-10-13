@@ -10,14 +10,20 @@
     <version>0.1.0</version>
     <description><![CDATA[Liste de souhaits de Noël pour Joomla!]]></description>
     <namespace path="src">Noel\Component\Aiwfc</namespace>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
     <administration>
         <files folder="admin">
             <folder>services</folder>
             <folder>src</folder>
+            <folder>sql</folder>
             <folder>tmpl</folder>
         </files>
         <menu link="option=com_aiwfc" img="class:default">
-            <![CDATA[Liste de souhaits]]>
+            <![CDATA[Lista de deseos]]>
         </menu>
     </administration>
 </extension>
