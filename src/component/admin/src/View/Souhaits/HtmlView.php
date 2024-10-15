@@ -38,6 +38,6 @@ class HtmlView extends BaseHtmlView
 
         ToolbarHelper::title('Souhaits');
 
-        $toolbar->addNew('souhaits.add');
+        $toolbar->addNew('souhait.add');
     }
 }

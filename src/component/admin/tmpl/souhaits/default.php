@@ -5,8 +5,8 @@ use Joomla\CMS\Router\Route;
 \defined('_JEXEC') or die;
 
 ?>
-<?php if ($this->items) : ?>
-    <form action="<?php echo Route::_('index.php?option=com_aiwfc&view=souhaits'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo Route::_('index.php?option=com_aiwfc&view=souhaits'); ?>" method="post" name="adminForm" id="adminForm">
+    <?php if ($this->items) : ?>
         <div class="table-responsive">
             <table class="table table-striped">
                 <caption>Liste de souhaits</caption>
@@ -38,16 +38,16 @@ use Joomla\CMS\Router\Route;
                 </tbody>
             </table>
         </div>
-        <input type="hidden" name="task" value="">
-    </form>
-<?php else : ?>
-    <div class="text-large">
-        <p>Vous n'avez pas de désirs. Rappelez-vous cela:</p>
-        <blockquote cite="https://es.wikiquote.org/wiki/Deseo#cite_ref-senor135-9_2-2">
-            Avant que de désirer fortement une chose, il faut examiner quel bonheur en ont ceux qui la possèdent.
-            <footer>
-                <a href="">François de La Rochefoucauld</a>
-            </footer>
-        </blockquote>
-    </div>
-<?php endif; ?>
+    <?php else : ?>
+        <div class="text-large">
+            <p>Vous n'avez pas de désirs. Rappelez-vous cela:</p>
+            <blockquote cite="https://es.wikiquote.org/wiki/Deseo#cite_ref-senor135-9_2-2">
+                Avant que de désirer fortement une chose, il faut examiner quel bonheur en ont ceux qui la possèdent.
+                <footer>
+                    <a href="">François de La Rochefoucauld</a>
+                </footer>
+            </blockquote>
+        </div>
+    <?php endif; ?>
+    <input type="hidden" name="task" value="">
+</form>

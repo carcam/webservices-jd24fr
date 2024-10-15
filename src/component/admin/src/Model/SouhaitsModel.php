@@ -3,7 +3,6 @@
 namespace Noel\Component\Aiwfc\Administrator\Model;
 
 use Joomla\CMS\MVC\Model\ListModel;
-use Joomla\CMS\Factory;
 
 \defined('_JEXEC') or die;
 

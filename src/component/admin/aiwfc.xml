@@ -17,13 +17,14 @@
     </install>
     <administration>
         <files folder="admin">
+            <folder>forms</folder>
             <folder>services</folder>
             <folder>src</folder>
             <folder>sql</folder>
             <folder>tmpl</folder>
         </files>
         <menu link="option=com_aiwfc" img="class:default">
-            <![CDATA[Lista de deseos]]>
+            <![CDATA[Liste de souhaits]]>
         </menu>
     </administration>
 </extension>

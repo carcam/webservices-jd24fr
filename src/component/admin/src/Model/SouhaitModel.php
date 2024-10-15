@@ -10,8 +10,8 @@ class SouhaitModel extends AdminModel
     public function getForm($data = array(), $loadData = true)
     {
         $form = $this->loadForm(
-            'com_aiwfc.souhaits',
-            'souhaits',
+            'com_aiwfc.souhait',
+            'souhait',
             [
                 'control' => 'jform',
                 'load_data' => $loadData
@@ -27,7 +27,7 @@ class SouhaitModel extends AdminModel
     protected function loadFormData()
     {
         $app = Factory::getApplication();
-        $data = $app->getUserState('com_aiwfc.edit.souhaits.data', []);
+        $data = $app->getUserState('com_aiwfc.edit.souhait.data', []);
         if (empty($data)) {
             $data = $this->getItem();
         }
