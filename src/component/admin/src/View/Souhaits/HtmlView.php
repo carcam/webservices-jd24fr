@@ -1,6 +1,6 @@
 <?php
 
-namespace Noel\Component\Aiwfc\Administrator\View\Deseos;
+namespace Noel\Component\Aiwfc\Administrator\View\Souhaits;
 
 use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
 use Joomla\CMS\MVC\View\GenericDataException;

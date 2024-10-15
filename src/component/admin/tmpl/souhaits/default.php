@@ -42,7 +42,7 @@ use Joomla\CMS\Router\Route;
     </form>
 <?php else : ?>
     <div class="text-large">
-        <p>No tienes deseos. Recuerda que:</p>
+        <p>Vous n'avez pas de désirs. Rappelez-vous cela:</p>
         <blockquote cite="https://es.wikiquote.org/wiki/Deseo#cite_ref-senor135-9_2-2">
             Avant que de désirer fortement une chose, il faut examiner quel bonheur en ont ceux qui la possèdent.
             <footer>
