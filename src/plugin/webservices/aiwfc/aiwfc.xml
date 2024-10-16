@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="webservices" method="upgrade">
+    <name>plg_webservices_aiwfc</name>
+    <author><![CDATA[Carlos Cámara]]></author>
+    <authorEmail>carlos@hepta.es</authorEmail>
+    <authorUrl>https://developingextensionsforjoomla5.com</authorUrl>
+    <creationDate>2024-04-12</creationDate>
+    <copyright>(C) 2024 Noël Enterprises.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>0.1.0</version>
+    <description><![CDATA[Plugin pour router le service web de la liste de souhaits pour Joomla!]]></description>
+    <namespace path="src">Noel\Plugin\WebServices\Aiwfc</namespace>
+    <files>
+        <folder plugin="aiwfc">services</folder>
+        <folder>src</folder>
+    </files>
+</extension>
