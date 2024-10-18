@@ -1,0 +1,103 @@
+/*
+@theme book
+*/
+
+@import 'default';
+
+header {
+    text-align: center;
+    color: #55431F;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #E6B656;
+    padding: 1rem;
+    margin-left: -10rem;
+    width: auto;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.url {
+    font-family: monospace;
+    font-size: .8rem;
+    background-color: #55431f;
+    color: white;
+}
+
+/*
+section::before {
+    display: block;
+    content: url('./images/cover.png');
+    width: 100px;
+    height: auto;
+
+    position: absolute;
+    right: 1rem;
+    bottom: 0rem;
+}
+
+section[data-marpit-pagination="1"]:before {
+    display: none !important;
+}
+*/
+section::after {
+    right: auto;
+    /* Unset default placing inherited from the built-in theme */
+    left: 50%;
+    color: black;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.column {
+    padding: 1rem;
+}
+
+.column__content {
+    flex: 1 1 100%;
+}
+
+.column__reference {
+    flex: 1 0 250px;
+    background-color: antiquewhite;
+    height: 400px;
+    text-align: center;
+}
+
+section.cover {
+    background-color: #FFC500;
+}
+
+.container_center{
+    margin:2rem auto;
+    width: 70%;
+}
+
+.ml-8 {
+    margin-left: 4rem;
+}
+
+section.thank-you {
+    text-align: center;
+    background-color: #FFC500;
+    color: white;
+}
+
+.thank-you footer:before {
+    display: none;
+}
+
+.text-huge {
+    font-size: 4rem;
+}
