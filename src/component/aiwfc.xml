@@ -28,7 +28,7 @@
         </menu>
     </administration>
     <api>
-        <files folder="api/components/com_aiwfc">
+        <files folder="api">
             <folder>src</folder>
         </files>
     </api>

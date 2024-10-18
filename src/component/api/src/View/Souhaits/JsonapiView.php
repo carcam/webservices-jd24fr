@@ -10,7 +10,7 @@ class JsonapiView extends BaseApiView
                 'id',
                 'titre',
                 'description',
-                'creado'
+                'cree_le'
         ];
 
         protected $fieldsToRenderItem = [
