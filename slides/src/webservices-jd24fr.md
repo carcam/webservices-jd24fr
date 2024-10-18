@@ -14,7 +14,6 @@ _class: cover
 
 <!--
 <!--
-// Start of Selection
 _header: "Qui je suis"
 footer: '[Développer des extensions pour Joomla! 5](https://developingextensionsforjoomla5.com/jdayfr2024)'
 -->
@@ -66,7 +65,7 @@ _header: "Un composant bien défini pour Joomla! 5"
 - Nous partons d'un composant bien défini suivant les standards Joomla! 5
 - Vous pouvez vérifier comment nous avons construit ce composant dans d'autres versions de ce workshop à l'adresse:
 
-  - https://developingextensionsforjoomla5.com/jdayfr2024
+  - https://developingextensionsforjoomla5.com/jdayes2024
   - https://developingextensionsforjoomla5.com/jdayusa2024
 
 </div>
@@ -101,7 +100,7 @@ Chapitre 6
 ---
 
 <!--
-_header: "Usando los servicios web en Joomla!"
+_header: "Utilisation des services web dans Joomla!"
 -->
 <div class="columns">
 <div class="column column__content">
@@ -124,7 +123,7 @@ Chapitre 6
 ---
 
 <!--
-_header: "Creando el token de API"
+_header: "Création du token API"
 -->
 <div class="columns">
 <div class="column column__content">
@@ -249,20 +248,16 @@ use Joomla\DI\ServiceProviderInterface;
 use Joomla\Event\DispatcherInterface;
 use Noel\Plugin\WebServices\Aiwfc\Extension\Aiwfc;
 
-\defined('_JEXEC') or die;
-
 return new class () implements ServiceProviderInterface {
     public function register(Container $container): void
     {
         $container->set(
-            PluginInterface::class,
-            function (Container $container) {
+            PluginInterface::class, function (Container $container) {
                 $plugin     = new Aiwfc(
                     $container->get(DispatcherInterface::class),
                     (array) PluginHelper::getPlugin('webservices', 'aiwfc')
                 );
                 $plugin->setApplication(Factory::getApplication());
-
                 return $plugin;
             }
         );
@@ -306,9 +301,17 @@ final class Aiwfc extends CMSPlugin
 {
     public function onBeforeApiRoute(&$router)
     {
+        $route = new Route(
+            ['GET'],
+			'v1/aiwfc/souhaits/:id',
+			'souhaits.displayItem',
+			['id' => '(\d+)'],
+			['component' => 'com_aiwfc']
+		);
+        $router->addRoute($route);
         $router->createCRUDRoutes(
             'v1/aiwfc/souhaits',
-            'souhaits',
+            'souhaits.displayList',
             ['component' => 'com_aiwfc']
         );
     }
@@ -329,6 +332,7 @@ Chapitre 6
 <!--
 - Deux façons de créer les routes:
   1. avec la méthode `createCRUDRoutes()` qui ajoute toutes les actions possibles au service web.
+  2. Avec la classe `Route` du Framework de Joomla! qui nous permet de détailler les actions à autoriser.
 - Pour les entités individuelles, `createCRUDRoutes()` ajoute automatiquement le paramètre :id à la route que nous indiquons.
 - Les paramètres sont: 
    - URL du service web
@@ -464,5 +468,5 @@ footer: ''
 -->
 
 <div class="text-huge">
-    Merci beaucoup!
+    Merci!
 </div>
