@@ -352,8 +352,79 @@ _header: "Gestion des requêtes dans notre composant"
 <div class="columns">
 <div class="column column__content">
 
-- Créer le fichier `ProjectsController.php`
-- Créer le fichier `JsonapiView.php`
+Créer le fichier `ProjectsController.php`
+
+```php
+<?php
+
+namespace Noel\Component\Aiwfc\Api\Controller;
+
+use Joomla\CMS\MVC\Controller\ApiController;
+
+\defined('_JEXEC') or die;
+
+class SouhaitsController extends ApiController
+{
+	protected $contentType = 'Souhaits';
+	protected $default_view = 'Souhaits';
+}
+
+```
+
+</div>
+<div class="column column__reference">
+
+### References
+
+![](./images/cover.png)
+
+Chapitre 6
+
+</div>
+</div>
+
+<!--
+
+- Nous étendons la classe `ApiController` de Joomla, ce qui nous permettra d'économiser beaucoup de code, car cette classe fournit déjà les méthodes de base comme `displayList()` et `add()`.
+
+-->
+
+---
+
+<!--
+_header: "Gestion des requêtes dans notre composant"
+-->
+<div class="url">https://developingextensionsforjoomla5.com/jdayes2024/live/5-api</div>
+
+<div class="columns">
+<div class="column column__content">
+
+Créer le fichier `api/src/View/Souhaits/JsonapiView.php`
+
+```php
+<?php
+
+namespace Noel\Component\Aiwfc\Api\View\Souhaits;
+
+use Joomla\CMS\MVC\View\JsonApiView as BaseApiView;
+
+class JsonapiView extends BaseApiView
+{
+        protected $fieldsToRenderList = [
+                'id',
+                'titre',
+                'description',
+                'creado'
+        ];
+
+        protected $fieldsToRenderItem = [
+                'id',
+                'titre',
+                'description'
+        ];
+}
+
+```
 
 </div>
 <div class="column column__reference">
