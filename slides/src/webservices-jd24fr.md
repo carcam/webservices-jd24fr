@@ -16,7 +16,7 @@ _class: cover
 <!--
 // Start of Selection
 _header: "Qui je suis"
-footer: '[Développer des extensions pour Joomla! 5](https://developingextensionsforjoomla5.com/jdayes2024)'
+footer: '[Développer des extensions pour Joomla! 5](https://developingextensionsforjoomla5.com/jdayfr2024)'
 -->
 
 <div class="columns">
@@ -66,7 +66,7 @@ _header: "Un composant bien défini pour Joomla! 5"
 - Nous partons d'un composant bien défini suivant les standards Joomla! 5
 - Vous pouvez vérifier comment nous avons construit ce composant dans d'autres versions de ce workshop à l'adresse:
 
-  - https://developingextensionsforjoomla5.com/jdayes2024
+  - https://developingextensionsforjoomla5.com/jdayfr2024
   - https://developingextensionsforjoomla5.com/jdayusa2024
 
 </div>
@@ -89,7 +89,7 @@ _header: "Introduction aux services web"
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -112,7 +112,7 @@ _header: "Usando los servicios web en Joomla!"
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -134,7 +134,7 @@ _header: "Creando el token de API"
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -153,7 +153,7 @@ Chapitre 6
 <!--
 _header: "Creando un point d'entrée pour notre service web"
 -->
-<div class="url">https://developingextensionsforjoomla5.com/jdayes2024/live/4-web-services-plugin</div>
+<div class="url">https://developingextensionsforjoomla5.com/jdayfr2024/live/webservices-plugin</div>
 
 <div class="columns">
 <div class="column column__content">
@@ -164,7 +164,7 @@ _header: "Creando un point d'entrée pour notre service web"
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -210,7 +210,11 @@ Fichier de manifeste : `plugins/webservices/aiwfc/aiwfc.xml` :
 </div>
 <div class="column column__reference">
 
-### References
+<!-- Start of Selection -->
+
+### Références
+
+<!-- End of Selection -->
 
 ![](./images/cover.png)
 
@@ -232,7 +236,7 @@ _header: "Créer un plugin de service web"
 <div class="columns">
 <div class="column column__content">
 
-Fichero: `plugins/webservices/aiwfc/services/provider.php`:
+Fichier: `plugins/webservices/aiwfc/services/provider.php`:
 
 ```php
 <?php
@@ -269,7 +273,7 @@ return new class () implements ServiceProviderInterface {
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -302,17 +306,9 @@ final class Aiwfc extends CMSPlugin
 {
     public function onBeforeApiRoute(&$router)
     {
-        $route = new Route(
-            ['GET'],
-			'v1/aiwfc/souhaits/:id',
-			'souhaits.displayItem',
-			['id' => '(\d+)'],
-			['component' => 'com_aiwfc']
-		);
-        $router->addRoute($route);
         $router->createCRUDRoutes(
             'v1/aiwfc/souhaits',
-            'souhaits.displayList',
+            'souhaits',
             ['component' => 'com_aiwfc']
         );
     }
@@ -322,7 +318,7 @@ final class Aiwfc extends CMSPlugin
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -333,7 +329,6 @@ Chapitre 6
 <!--
 - Deux façons de créer les routes:
   1. avec la méthode `createCRUDRoutes()` qui ajoute toutes les actions possibles au service web.
-  2. Avec la classe `Route` du Framework de Joomla! qui nous permet de détailler les actions à autoriser.
 - Pour les entités individuelles, `createCRUDRoutes()` ajoute automatiquement le paramètre :id à la route que nous indiquons.
 - Les paramètres sont: 
    - URL du service web
@@ -347,7 +342,7 @@ Chapitre 6
 <!--
 _header: "Gestion des requêtes dans notre composant"
 -->
-<div class="url">https://developingextensionsforjoomla5.com/jdayes2024/live/5-api</div>
+<div class="url">https://developingextensionsforjoomla5.com/jdayfr2024/live/api</div>
 
 <div class="columns">
 <div class="column column__content">
@@ -374,7 +369,7 @@ class SouhaitsController extends ApiController
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -394,7 +389,6 @@ Chapitre 6
 <!--
 _header: "Gestion des requêtes dans notre composant"
 -->
-<div class="url">https://developingextensionsforjoomla5.com/jdayes2024/live/5-api</div>
 
 <div class="columns">
 <div class="column column__content">
@@ -429,7 +423,7 @@ class JsonapiView extends BaseApiView
 </div>
 <div class="column column__reference">
 
-### References
+### Références
 
 ![](./images/cover.png)
 
@@ -460,15 +454,15 @@ _header: "Sur les épaules de géants"
 
   - https://manual.joomla.org
 
-  <!-- Si vi más lejos que otros hombres es porque estaba subido a hombros de gigantes. -->
+  <!-- Si j'ai vu plus loin que d'autres hommes, c'est parce que j'étais sur les épaules de géants. -->
 
 ---
 
 <!--
-_class: thank-you
+_class: Merci beaucoup
 footer: ''
 -->
 
 <div class="text-huge">
-    Merci!
+    Merci beaucoup!
 </div>
