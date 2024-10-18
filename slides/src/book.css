@@ -76,11 +76,11 @@ section::after {
 }
 
 section.cover {
-    background-color: #FFC500;
+    background-color: #FFffff;
 }
 
-.container_center{
-    margin:2rem auto;
+.container_center {
+    margin: 2rem auto;
     width: 70%;
 }
 
@@ -90,7 +90,7 @@ section.cover {
 
 section.thank-you {
     text-align: center;
-    background-color: #FFC500;
+    background-color: #FFffff;
     color: white;
 }
 
