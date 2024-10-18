@@ -10,7 +10,7 @@ Cette session a suivi la structure de mon livre sur le développement d'extensio
 
 ## Télécharger la présentation en pdf
 
-- [Añade el servicio web](https://carcam.github.io/webservices-jd24fr/slides/webservices-jd24fr.pdf)
+- [Ajoutez le service web](https://carcam.github.io/webservices-jd24fr/slides/webservices-jd24fr.pdf)
 
 ## Comment utiliser ce dépôt
 
@@ -24,11 +24,11 @@ Le code du composant est situé dans la branche _main_ de ce dépôt et est divi
 
 ### Fichiers de présentation
 
-Les fichiers de présentation sont situés dans la branche _gh-pages_ de ce dépôt. Plus précisément dans le dossier _slides_.
+Les fichiers de présentation sont situés dans la branche _slides_ de ce dépôt. Plus précisément dans le dossier _slides_.
 
 La présentation est réalisée avec [Marp](https://marp.app/) et les fichiers sources se trouvent dans le dossier _slides/src_.
 
-La commande pour générer la présentation est la suivante :
+La commande pour générer la présentation avec _Marp-cli_ est la suivante :
 
 ```bash
 marp --html webservices-jd24fr.md --theme-set book.css --pdf-notes --allow-local-files --output slides/webservices-jd24fr.pdf
