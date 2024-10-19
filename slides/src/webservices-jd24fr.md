@@ -13,7 +13,6 @@ _class: cover
 ---
 
 <!--
-<!--
 _header: "Qui je suis"
 footer: '[Développer des extensions pour Joomla! 5](https://developingextensionsforjoomla5.com/jdayfr2024)'
 -->
@@ -233,7 +232,7 @@ Chapitre 6
 _header: "Créer un plugin de service web"
 -->
 <div class="columns">
-<div class="column column__content">
+<div class="column column__content reduced-code">
 
 Fichier: `plugins/webservices/aiwfc/services/provider.php`:
 
@@ -287,31 +286,27 @@ Chapitre 6
 _header: "Créer un plugin de service web"
 -->
 <div class="columns">
-<div class="column column__content">
+<div class="column column__content reduced-code">
 
 Fichier: `plugins/webservices/aiwfc/src/Extension/Aiwfc.php`:
 
 ```php
 <?php
+
 namespace Noel\Plugin\WebServices\Aiwfc\Extension;
+
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Router\Route;
+
 \defined('_JEXEC') or die;
+
 final class Aiwfc extends CMSPlugin
 {
     public function onBeforeApiRoute(&$router)
     {
-        $route = new Route(
-            ['GET'],
-			'v1/aiwfc/souhaits/:id',
-			'souhaits.displayItem',
-			['id' => '(\d+)'],
-			['component' => 'com_aiwfc']
-		);
-        $router->addRoute($route);
         $router->createCRUDRoutes(
             'v1/aiwfc/souhaits',
-            'souhaits.displayList',
+            'souhaits',
             ['component' => 'com_aiwfc']
         );
     }
@@ -349,9 +344,9 @@ _header: "Gestion des requêtes dans notre composant"
 <div class="url">https://developingextensionsforjoomla5.com/jdayfr2024/live/api</div>
 
 <div class="columns">
-<div class="column column__content">
+<div class="column column__content reduced-code">
 
-Créer le fichier `ProjectsController.php`
+Créer le fichier `api/src/Controller/SouhaitsController.php`
 
 ```php
 <?php
@@ -395,29 +390,24 @@ _header: "Gestion des requêtes dans notre composant"
 -->
 
 <div class="columns">
-<div class="column column__content">
+<div class="column column__content reduced-code">
 
-Créer le fichier `api/src/View/Souhaits/JsonapiView.php`
+Créer le fichier `api/components/com_aiwfc/src/View/Souhaits/JsonapiView.php`
 
 ```php
 <?php
-
 namespace Noel\Component\Aiwfc\Api\View\Souhaits;
-
 use Joomla\CMS\MVC\View\JsonApiView as BaseApiView;
 
 class JsonapiView extends BaseApiView
 {
         protected $fieldsToRenderList = [
-                'id',
-                'titre',
-                'description',
-                'creado'
+                'id', 'titre',
+                'description', 'cree_le'
         ];
 
         protected $fieldsToRenderItem = [
-                'id',
-                'titre',
+                'id', 'titre',
                 'description'
         ];
 }
@@ -438,7 +428,7 @@ Chapitre 6
 
 <!--
 
-- Nous étendons la classe `ApiController` de Joomla, ce qui nous permettra d'économiser beaucoup de code, car cette classe fournit déjà les méthodes de base comme `displayList()` et `add()`.
+- Nous incluons la classe `JsonapiView` qui étend la classe `JsonApiView` de Joomla. Dans ce fichier, nous définissons les champs que nous souhaitons afficher dans la liste et dans l'élément.
 
 -->
 

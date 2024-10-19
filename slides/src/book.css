@@ -101,3 +101,7 @@ section.thank-you {
 .text-huge {
     font-size: 4rem;
 }
+
+.reduced-code marp-pre {
+    zoom: 0.7;
+}
