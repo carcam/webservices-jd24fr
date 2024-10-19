@@ -18,15 +18,13 @@ Cette session a suivi la structure de mon livre sur le développement d'extensio
 
 Le code du composant est situé dans la branche _main_ de ce dépôt et est divisé dans les balises suivantes, suivant les différentes étapes de ma session :
 
-- _1-bootstraping_ : C'est le code minimum pour avoir un composant installable qui affiche du contenu dans le backend.
-- 2-listview\* : Cette itération affiche les données de la vue en liste.
-- 3-editview\* : Cette itération ajoute un moyen de créer, lire et mettre à jour des éléments.
-- 4-webservices-plugin* : Cette itération ajoute un plugin *webservice\* qui route notre extension. Il utilise la nouvelle architecture de Joomla 5.
-- 5-api : Cette itération ajoute le code minimal pour créer la logique du service web.
+- _v1.0.0_ : C'est le code minimum pour avoir un composant installable qui affiche du contenu dans le backend.
+- _web-services-plugin_ : Cette itération ajoute un plugin \*webservice\* qui route notre extension. Il utilise la nouvelle architecture de Joomla 5.
+- _api_ : Cette itération ajoute le code minimal pour créer la logique du service web.
 
 ### Fichiers de présentation
 
-Les fichiers de présentation sont situés dans la branche _gh-pages_ de ce dépôt. Plus précisément dans le dossier _slides_.
+Les fichiers de présentation sont situés dans la branche _slides de ce dépôt. Plus précisément dans le dossier \_slides_.
 
 La présentation est réalisée avec [Marp](https://marp.app/) et les fichiers sources se trouvent dans le dossier _slides/src_.
 
